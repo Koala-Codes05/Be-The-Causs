@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+:root {
+  --primary-fnt: Ailerons;
+  --secondary-font: Ahsing;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'REM', sans-serif;
+}
+.secondary-fnt {
+  font-family: ahsing!important;
+  font-weight: 100;
+  font-size: 5rem;
+  letter-spacing: .2rem;
+  color: red;
+}
+
+.store-nm{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+  line-height: 2rem;
+  margin-bottom: 5.5rem;
+}
+
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    color: white;
+    background: black;
+  }
+
+  .main-wrapper{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+  }
+
+  .later {
+    font-size: 60;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+    outline: none;
+    margin-top: 2.8rem;
+    animation: flicker 5s linear infinite;
+  }
+
+@keyframes flicker 
+{
+  1%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%,92%
+    {
+      color: rgb(19, 19, 19);
+      text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%
+    {
+      color: #fff;
+      text-shadow: 1px 0 10px #03bcf4
+      0 0 20px #03bcf4,
+      0 0 40px #03bcf4,
+      ee 80px #03bcf4,
+      0 160px #03bcf4;
+   }
+}
+
+  .soon {
+    -webkit-box-reflect: below 1px linear-gradient(transparent, black);
+    line-height: 2.9rem;
+    outline-width: 0;
+  }
+
+  .subscribe{
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  /* Social Media Links */
+
+  .wrapper{
+    display: flex;
+    position: absolute;
+    right: 0%;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+   .button{
+        display: inline-block;
+        height: 3.3rem;
+        width: 3.3rem;
+        margin: .6rem;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+  }
+  
+  .button .icon{
+    display: inline-block;
+    height: 3.3rem;
+    width: 3.3rem;
+    color: black;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+  }
+
+  .button:nth-child(1):hover .icon{
+    background: #4267B2;
+  }
+
+  .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+  }
+
+  .button:nth-child(3):hover .icon{
+    background: #E1306C;
+  }
+
+  .button:nth-child(4):hover .icon{
+    background: #ff0000;
+  }
+
+  .button .icon i{
+    font-size: 1.8rem;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+
+  .button:hover .icon i{
+    color: #fff;
+  }
+
+  /* clock Animation */
+
+  div.clock{
+    height: 35rem;
+    width: 35rem;
+    /* background-color: rgba(255, 255, 255, .1); */
+    /* border-radius: 50%; */
+    /* backdrop-filter: blur(20px); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 10px 10px 35px; */
+    z-index: 0;
+  }
+  div.clock img{
+    height: 100%;
+    width: 100%;
+    opacity: .1;
+  }
+  .hour{
+    height: 80px;
+    width: 10px;
+    top: 100px;
+  }
+  .minute{
+    height: 100px;
+    width: 6px;
+    top: 80px;
+  }
+  .second{
+    height: 110px;
+    width: 3px;
+    top: 70px;
+  }
+  .hand{
+    position: absolute;
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    /* border-radius: 5px; */
+    transform-origin: bottom;
+  }
