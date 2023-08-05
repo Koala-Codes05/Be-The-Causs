@@ -26,6 +26,7 @@ body{
   display: grid;
   place-items: center;
   overflow: hidden;
+  z-index: 1;
   }
 
 .slide-track {
@@ -77,6 +78,18 @@ img:hover{
   margin-bottom: 5.5rem;
 }
 
+.store-BG{
+    width: 40.2rem;
+    height: 40.2rem;
+    clip-path: polygon(59% 0%, 0% 77%, 100% 90%);
+    position: absolute;
+    z-index: 0;
+}
+.store-BG{
+  background-color: #272829 ;
+  opacity: 45%;
+}
+
 html,body{
     display: grid;
     height: 100%;
@@ -90,6 +103,7 @@ html,body{
     position: absolute;
     top: 30%;
     text-align: center;
+    z-index: 2;
   }
 
   .later {
@@ -106,7 +120,7 @@ html,body{
 {
   1%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%,92%
     {
-      color: rgb(19, 19, 19);
+      color: rgb(31, 29, 29);
       text-shadow: none;
     }
     18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%
@@ -143,6 +157,7 @@ html,body{
     right: 0%;
     flex-direction: column;
     justify-items: center;
+    z-index: 3;
   }
 
    .button{
@@ -198,12 +213,12 @@ html,body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 1;
   }
   div.clock img{
     height: 100%;
     width: 100%;
-    opacity: .1;
+    opacity: .3;
   }
   .hour{
     height: 80px;
