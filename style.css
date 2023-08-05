@@ -18,6 +18,10 @@ body{
   color: red;
 }
 
+.media-head {
+  display: none;
+}
+
 .slider {
   height: 550px;
   margin: auto;
@@ -74,8 +78,8 @@ img:hover{
   font-size: 1.2rem;
   font-weight: 100;
   letter-spacing: 5px;
-  line-height: 2rem;
-  margin-bottom: 5.5rem;
+  line-height: 3.4rem;
+  margin-bottom: 4rem;
 }
 
 .store-BG{
@@ -101,7 +105,7 @@ html,body{
 
   .main-wrapper{
     position: absolute;
-    top: 30%;
+    top: 25%;
     text-align: center;
     z-index: 2;
   }
@@ -246,3 +250,41 @@ html,body{
     /* border-radius: 5px; */
     transform-origin: bottom;
   }
+
+/* Mobile View */
+
+@media only screen and (max-width: 425px) {
+  /* social links */
+  .wrapper {
+    flex-direction: row;
+    right: 30%;
+    bottom: 0%;
+  }
+  .button, .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 20%;
+  }
+  .icon {
+    margin: -7px 0 0 -7px;
+  }
+  .clock {
+    display: none;
+  }
+
+  /* coming soon text */
+  .later {
+    font-size: 30px;
+    line-height: 1.2rem;
+  }
+  .media-head {
+    display: inline-block;
+    position: fixed;
+    bottom: 10%;
+    right: 30%;
+    font-size: 1.2rem;
+  }
+  .store-BG {
+    display: none;
+  }
+}
