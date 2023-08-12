@@ -2,11 +2,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="style.css">     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">                     
       <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=REM:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <title>Be The Causs Store</title>
-
    </head>
    <body>
       
@@ -16,7 +15,7 @@
             <div class="slide">
             <img src='./img/img0.jpg'/>
             </div>
-            <div class="slide">
+            <div class="slide">                                                                                                                                                            
             <img src='./img/img1.jpg'/>
             </div>
             <div class="slide">
@@ -72,8 +71,24 @@
          <div class="minute hand" id="minute"></div>
          <div class="second hand" id="second"></div>
       </div>
-      <div class="store-BG"></div>
+      <div class="polygon"></div>
+      <dialog id="modal">
+         <div class="modal-close-flex">
+            <button id="hisenberg" class="modal-close">
+               <i  class="fa-solid fa-xmark"></i>
+            </button>
+         </div>
+         <p class="modal-logo">Be The<br><span class="main-font">Causs</span></p>
+         <img src="./img/cute cat.png" alt="cute-cat" class="modal-img">
+         <h6 class="modal-head">Stay in touch!</h6>
+        <p class="modal-paragraph">Be Part of Our Exclusive Circle: Subscribe for Exciting Updates and Insights on Our Upcoming Fashion Store</p>
+        <form action="">
+         <input type="email" id="email" placeholder="Enter your email...">
+         <input type="submit" id="email_submit">
+        </form>
+      </dialog>
       <div class="main-wrapper">
+         <div class="gray-scale"></div>
          <div class="store-nm">
             <h1>Be The <br><span class="secondary-fnt">Causs</span></h1>
          </div>
@@ -85,7 +100,10 @@
          <h5 class="media-head">Check our socials...</h5>
       </div>
       <div class="subscribe">
-         <span>Subscribe</span>
+         <button id="openheimer" class="subscribe-button">Subscribe</button>
+      </div>
+      <div class="stay-tuned">
+         <span>Stay Tuned!</span>
       </div>
    <div class="wrapper">
       <a target="_blank" href="https://www.facebook.com/profile.php?id=100092708817249">
@@ -112,6 +130,7 @@
             <span class="mediaNM">Instagram</span>
          </div>
       </a>
-      <script src="clock.js"></script>
+      <script src="./app/clock.js"></script>
+      <script src="./app/modal.js"></script>
    </body>
 </html>

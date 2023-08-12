@@ -9,6 +9,7 @@
 body{
     font-family: 'Lato', sans-serif;
     font-family: 'REM', sans-serif;
+    overflow: hidden;
 }
 .secondary-fnt {
   font-family: ahsing!important;
@@ -21,32 +22,34 @@ body{
 .media-head {
   display: none;
 }
+/* slider  */
 
 .slider {
-  height: 550px;
+  height: 700px;
   margin: auto;
-  position: relative;
+  position: absolute;
+  top: 25%;
   width: 100%;
   display: grid;
   place-items: center;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   }
 
 .slide-track {
   display: flex;
-  align-items: left;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   width: calc(250px * 20);
   animation: scroll 40s linear infinite;
   }
 
 @keyframes scroll {
     0% {
-      transform: translatey(0);
+      transform: translatex(0);
     }
       100% {
-      transform: translatey(calc(-250px * 9));
+      transform: translatex(calc(-250px * 9));
     }
   }
 
@@ -54,8 +57,8 @@ body{
   height: 200px;
   width: 350px;
   display: flex;
-  align-items: left;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   margin-left: .8%;
   padding: 15px;
   perspective: 200px;
@@ -71,7 +74,6 @@ img {
 img:hover{
     transform: translatez(20px);
   }
-    /* GRADIENT SHADOWS */
 
 .store-nm{
   font-family: 'Montserrat', sans-serif;
@@ -82,16 +84,14 @@ img:hover{
   margin-bottom: 4rem;
 }
 
-.store-BG{
+.polygon{
     width: 40.2rem;
     height: 40.2rem;
     clip-path: polygon(59% 0%, 0% 77%, 100% 90%);
     position: absolute;
+    background-color: #272829 ;
+    opacity: 60%;
     z-index: 0;
-}
-.store-BG{
-  background-color: #272829 ;
-  opacity: 45%;
 }
 
 html,body{
@@ -103,7 +103,7 @@ html,body{
     background: black;
   }
 
-  .main-wrapper{
+.main-wrapper{
     position: absolute;
     top: 25%;
     text-align: center;
@@ -137,12 +137,14 @@ html,body{
       0 160px #03bcf4;
    }
 }
+/* coming soon  */
 
   .soon {
     -webkit-box-reflect: below 1px linear-gradient(transparent, black);
     line-height: 2.9rem;
     outline-width: 0;
   }
+/* .subscribe */
 
   .subscribe{
     position: absolute;
@@ -150,8 +152,27 @@ html,body{
     right: 0%;
     font-size: 15px;
     font-weight: 400;
-    cursor: pointer;
   }
+
+  .subscribe-button{
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 24px;
+    text-align: center;
+    transition: all 300ms ease-in;
+  }
+  
+  .subscribe-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    background-color: whitesmoke;
+    color: red;
+    outline: none;
+}
 
   /* Social Media Links */
 
@@ -222,7 +243,7 @@ html,body{
   div.clock img{
     height: 100%;
     width: 100%;
-    opacity: .3;
+    opacity: .4;
   }
   .hour{
     height: 80px;
@@ -241,15 +262,83 @@ html,body{
   }
   .hand{
     position: absolute;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, .4);
     backdrop-filter: blur(20px);
     margin: auto;
     left: 0;
     right: 0;
     bottom: 30%;
-    /* border-radius: 5px; */
     transform-origin: bottom;
   }
+
+
+/* Modal Styles */
+.main-font {
+  font-family:ahsing ;
+}
+#modal {
+  background-color: #FF4C29;
+}
+.modal-logo {
+  text-align:center;
+  font-size: 1.8rem;
+  margin: -10px 0;
+}
+.modal-img {
+  width: 200px;
+  margin: -10px auto -20px;
+  display: grid;
+  place-items: center;
+}
+.modal-close-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-close {
+  display:block;
+  position: relative;
+  right: 0%;
+  cursor: pointer;
+  border: none;
+  background-color: #FF4C29;
+  font-size: 2rem;
+}
+.modal-head {
+  text-align: center;
+  font-size: 2rem;
+  margin: -10px 0;
+}
+.modal-paragraph {
+    font-weight: 300;
+    color: whitesmoke;
+}
+#email {
+  display: block;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  height: 2.4rem;
+  width: 70%;
+  text-align: center;
+  background-color: #311914;
+  color: whitesmoke;
+  font-size: large;
+  margin: 0 auto;
+}
+#email_submit {
+  display: block;
+  margin: 10px auto 0;
+  padding:.8em 6em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #fff;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
 
 /* Mobile View */
 
